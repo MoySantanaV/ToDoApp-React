@@ -3,7 +3,6 @@ import { TodoContext } from "./toDoContext";
 import { ToDoCounter } from "./ToDoCounter";
 import { ToDoSearch } from "./ToDoSearch";
 import { ToDoList } from "./ToDoList";
-/* import { ToDoItem } from '../components/ToDoItem' */
 import { CreateToDo } from "./CreateToDo";
 
 function AppUI() {
@@ -26,13 +25,12 @@ function AppUI() {
         completeToDos={completeToDos}
         deleteToDos={deleteToDos}
         saveTodos={saveTodos}
-        />
-        {error && <p>Huston we got a problem!</p>}
-        {loading && <p>Loading, plese wait...</p>}
-        {!loading && !searchedToDos.length && (
-          <p>Time to create your first to-do!</p>
-        )}
-
+      />
+      {error && <p>Huston we got a problem!</p>}
+      {loading && <p>Loading, plese wait...</p>}
+      {!loading && !searchedToDos.length && (
+        <p>Time to create your first to-do!</p>
+      )}
 
       <CreateToDo />
     </div>
